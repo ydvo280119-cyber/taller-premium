@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Paint & Finish | Estética Automotriz Alta Gama</title>
+    <title>Premium Paint & Finish</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        /* Estructura Limpia, Profesional y Real */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         body { background-color: #0d0d0d; color: #ffffff; line-height: 1.6; }
-        header { background-color: rgba(18, 18, 18, 0.95); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #ffcc00; letter-spacing: 1px; }
-        .nav-links a { margin-left: 20px; color: #cccccc; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover { color: #ffcc00; }
-        .hero { padding: 140px 20px 80px; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+        
+        /* Menú Superior */
+        header { background-color: #121212; padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; color: #ffffff; }
+        .nav-links a { margin-left: 20px; color: #aaaaaa; font-size: 0.9rem; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #ffffff; }
+
+        /* Portada Principal: Enfoque en la Toyota Prado */
+        .hero { padding: 150px 20px 60px; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
         .hero-text { flex: 1; min-width: 300px; }
-        .hero-text h1 { font-size: 3rem; color: #ffffff; line-height: 1.2; margin-bottom: 20px; }
-        .hero-text h1 span { color: #ffcc00; }
-        .hero-text p { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 30px; }
-        .hero-img { flex: 1; min-width: 300px; text-align: center; }
-        .hero-img img { width: 100%; max-width: 550px; border-radius: 12px; box-shadow: 0 10px 30px rgba(255, 204, 0, 0.1); border: 1px solid #333; }
-        .btn-whatsapp { background-color: #25d366; color: #fff; padding: 15px 30px; font-weight: bold; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px; font-size: 1.05rem; text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: transform 0.3s; }
-        .btn-whatsapp:hover { transform: translateY(-3px); background-color: #20ba5a; }
-        section { padding: 80px 20px; border-bottom: 1px solid #1a1a1a; }
-        .section-title { text-align: center; font-size: 2.2rem; color: #ffcc00; margin-bottom: 10px; }
-        .section-subtitle { text-align: center; color: #888888; max-width: 700px; margin: 0 auto 50px; font-size: 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-        .card { background-color: #121212; border: 1px solid #222; border-radius: 8px; width: 360px; overflow: hidden; transition: border-color 0.3s; }
-        .card:hover { border-color: #ffcc00; }
-        .card img { width: 100%; height: 240px; object-fit: cover; }
-        .card-body { padding: 25px; }
-        .card-body h3 { color: #ffffff; font-size: 1.3rem; margin-bottom: 12px; }
-        .card-body p { color: #999999; font-size: 0.95rem; }
-        footer { background-color: #080808; padding: 40px 20px; text-align: center; border-top: 1px solid #222; color: #666666; font-size: 0.9rem; }
-        footer p { margin-bottom: 10px; }
-        footer .data-destacado { color: #aaaaaa; }
+        .hero-text h1 { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 15px; color: #ffffff; }
+        .hero-text p { color: #888888; font-size: 1.05rem; margin-bottom: 30px; max-width: 500px; }
+        .hero-img { flex: 1; min-width: 300px; }
+        .hero-img img { width: 100%; border-radius: 6px; border: 1px solid #222; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+
+        /* Botón Directo WhatsApp */
+        .btn-whatsapp { background-color: #25d366; color: #ffffff; padding: 14px 28px; font-size: 0.95rem; font-weight: bold; border-radius: 4px; display: inline-flex; align-items: center; text-decoration: none; transition: background-color 0.3s; }
+        .btn-whatsapp:hover { background-color: #1ebd59; }
+
+        /* Secciones del Taller */
+        section { padding: 80px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 40px; color: #ffffff; border-left: 4px solid #ffffff; padding-left: 15px; }
+
+        /* Grilla de Procesos Técnicos */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background-color: #121212; border: 1px solid #222; border-radius: 6px; overflow: hidden; }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-body h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; color: #ffffff; }
+        .card-body p { color: #888888; font-size: 0.9rem; line-height: 1.5; }
+
+        /* Bloque Destacado de Acabado Final */
+        .destacado-section { background-color: #121212; padding: 60px 20px; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+        .destacado-row { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+        .destacado-img { flex: 1; min-width: 300px; }
+        .destacado-img img { width: 100%; border-radius: 6px; border: 1px solid #222; display: block; }
+        .destacado-text { flex: 1; min-width: 300px; }
+        .destacado-text h3 { font-size: 1.4rem; font-weight: bold; margin-bottom: 12px; }
+        .destacado-text p { color: #888888; font-size: 0.95rem; margin-bottom: 15px; }
+
+        /* Pie de Página Directo */
+        footer { background-color: #0a0a0a; padding: 40px 20px; text-align: center; border-top: 1px solid #222; color: #555555; font-size: 0.85rem; }
+        footer p { margin-bottom: 6px; }
+        footer .data-destacado { color: #aaa; }
     </style>
 </head>
 <body>
@@ -43,115 +62,103 @@
         <div class="nav-container">
             <div class="logo">PREMIUM PAINT & FINISH</div>
             <nav class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#alta-gama">Alta Gama</a>
-                <a href="#proceso">Cirugía de Metal</a>
+                <a href="#procesos">Procesos Técnicos</a>
+                <a href="#acabado">Garantía de Brillo</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- PORTADA PRINCIPAL: Camioneta BMW Azul -->
-    <section id="inicio" style="border: none;">
+    <!-- PORTADA: Toyota Prado como Estandar de Calidad -->
+    <section style="border-bottom: 1px solid #1a1a1a;">
         <div class="hero">
             <div class="hero-text">
-                <h1>Estética Automotriz <span>Alta Gama</span></h1>
-                <p>Especialistas en la restauración estética, planchado y pintura premium para marcas de prestigio absoluto. Cuidado artesanal bajo estándares europeos en Pueblo Libre.</p>
+                <h1>Planchado y Pintura con Acabado de Alta Durabilidad</h1>
+                <p>Aplicamos un alto estándar técnico en cada vehículo. Procesos transparentes y materiales de primera línea para asegurar un resultado impecable y resistente al tiempo.</p>
                 <a href="https://wa.me." target="_blank" class="btn-whatsapp">
-                    📱 Cotizar Servicio Premium
+                    Cotizar Reparación por WhatsApp
                 </a>
             </div>
             <div class="hero-img">
-                <img src="portada-costado.jpg" alt="BMW Alta Gama Premium Paint & Finish">
+                <!-- Foto de la Toyota Prado ploma terminada -->
+                <img src="prado-final.jpg" alt="Acabado de pintura en camioneta Prado">
             </div>
         </div>
     </section>
 
-    <!-- EXHIBICIÓN ALTA GAMA: Acabados Espejo y Camionetas Exclusivas -->
-    <section id="alta-gama" style="background-color: #121212;">
+    <!-- SECCIÓN: Evidencia de los Procesos Reales del Taller -->
+    <section id="procesos">
         <div class="container">
-            <h2 class="section-title">Especialistas en Marcas de Prestigio</h2>
-            <p class="section-subtitle">Garantizamos acabados espejo perfectos en la carrocería de vehículos Porsche, BMW, Mercedes-Benz y deportivos exóticos.</p>
+            <h2 class="section-title">Evolución de Trabajo en Taller</h2>
             
             <div class="grid">
+                <!-- Bloque 1: Planchado Estructural (Foto Óxido Mustang) -->
                 <div class="card">
-                    <img src="pintura-espejo.jpg" alt="Acabado espejo en negro profundo">
+                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (7).jpeg" alt="Planchado estructural de paneles">
                     <div class="card-body">
-                        <h3>Acabado Espejo Premium</h3>
-                        <p>Tratamientos de pintura de nivel europeo, logrando un reflejo nítido, uniforme, libre de imperfecciones y con un sellado de alta resistencia.</p>
+                        <h3>Planchado Estructural</h3>
+                        <p>Corrección técnica de abolladuras utilizando desabollado por puntos (spotter). Regresamos la lata a su posición original evitando el uso excesivo de masilla.</p>
                     </div>
                 </div>
+
+                <!-- Bloque 2: Preparación de Superficies (Foto Puerta Cables Mustang) -->
                 <div class="card">
-                    <img src="prado-final.jpg" alt="Toyota Prado finalizada">
+                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (9).jpeg" alt="Preparación técnica y desmontaje">
                     <div class="card-body">
-                        <h3>Resultados Impecables</h3>
-                        <p>Dominamos las técnicas de nivelación y brillo para camionetas de gran volumen, entregando un reflejo cristalino bajo la luz del día.</p>
+                        <h3>Preparación de Superficies</h3>
+                        <p>Desmontamos accesorios, lunas y manijas aislando por completo los sistemas eléctricos originales para lograr una cobertura uniforme en los bordes críticos.</p>
                     </div>
                 </div>
+
+                <!-- Bloque 3: Acabado de Pintura (Foto Interna Plateada Mustang) -->
                 <div class="card">
-                    <img src="bmw-motor.jpg" alt="BMW Limpieza de Vano Motor">
+                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (3).jpeg" alt="Acabado de pintura profesional">
                     <div class="card-body">
-                        <h3>Pulcritud Profesional</h3>
-                        <p>Cuidamos cada componente de tu motor. Entregamos el vehículo soplado y libre de polvillo de masilla, respetando la ingeniería original.</p>
+                        <h3>Tratamiento de Caras Internas</h3>
+                        <p>Intervención y sellado de capots y maleteras por ambos lados de forma independiente, garantizando uniones limpias de pintura y libres de imperfecciones.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CIRUGÍA AUTOMOTRIZ: Caso Ford Mustang Convertible -->
-    <section id="proceso">
+    <!-- SECCIÓN DE GARANTÍA: El reflejo habla solo (Foto Kia Picanto Espejo) -->
+    <section id="acabado" class="destacado-section">
         <div class="container">
-            <h2 class="section-title">Cirugía de Metal: Caso Ford Mustang</h2>
-            <p class="section-subtitle">Desarmado técnico completo y restauración artesanal de carrocerías de colección sin abusar de la masilla.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <!-- Foto de WhatsApp (7) que muestra el guardabarros carcomido por el óxido extremo -->
-                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (7).jpeg" alt="Saneamiento de óxido en Mustang">
-                    <div class="card-body">
-                        <h3>1. Tratamiento Antióxido Radical</h3>
-                        <p>Cortamos el metal podrido por el tiempo desde la raíz. No maquillamos el óxido; devolvemos la fuerza estructural original a la lata.</p>
-                    </div>
+            <div class="destacado-row">
+                <div class="destacado-img">
+                    <img src="pintura-espejo.jpg" alt="Acabado espejo en Kia Picanto">
                 </div>
-
-                <div class="card">
-                    <!-- Foto de WhatsApp (9) que muestra la puerta desmontada cuidando las bisagras y cables -->
-                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (9).jpeg" alt="Desarmado de puertas y cableado Mustang">
-                    <div class="card-body">
-                        <h3>2. Desarmado Técnico y Electrónico</h3>
-                        <p>Desmontamos lunas y bisagras protegiendo el cableado eléctrico original del vehículo. Cuidado absoluto de sensores y sistemas complejos.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <!-- Foto de WhatsApp (3) que muestra al maestro verificando al tacto el interior de la pieza plateada -->
-                    <img src="Imagen de WhatsApp 2026-09-09 a las 15.19.25 (3).jpeg" alt="Pintura en metal vivo Mustang">
-                    <div class="card-body">
-                        <h3>3. Calidad de Estructura Interna</h3>
-                        <p>Tratamos y pintamos las piezas desmontadas por ambos lados con la misma exigencia que el exterior, asegurando un acabado liso al tacto.</p>
-                    </div>
+                <div class="destacado-text">
+                    <h3>Insumos Seleccionados y Barniz Premium</h3>
+                    <p>La calidad de entrega se sostiene en el uso obligatorio de materiales de alta resistencia (como líneas Glasurit y Sherwin-Williams).</p>
+                    <p>Esta base técnica protege la carrocería frente al clima de Lima, asegurando que el reflejo espejo mantenga su profundidad y nitidez con el paso de los años sin ponerse amarillo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EL PLUS: Restauración de Clásicos Nostálgicos -->
-    <section id="plus" style="background-color: #121212;">
+    <!-- SECCIÓN FINAL: Pulcritud demostrada en la entrega (Foto Motor BMW) -->
+    <section style="background-color: #0d0d0d;">
         <div class="container">
-            <h2 class="section-title">Nuestra Pasión por revivir Leyendas</h2>
-            <p class="section-subtitle">Como valor añadido, asumimos desafíos de reconstrucción estructural masiva en clásicos muy queridos, devolviéndoles su gloria de fábrica.</p>
-            
-            <div class="grid" style="max-width: 800px; margin: 0 auto;">
-                <div class="card" style="width: 100%; display: flex; flex-wrap: wrap; flex-direction: row;">
-                    <img src="nissan-final.jpg" alt="Nissan Sentra Clásico Terminado" style="width: 50%; min-width: 300px; height: auto; object-fit: cover;">
-                    <div class="card-body" style="width: 50%; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="color: #ffcc00; margin-bottom: 10px;">Plus: Restauración Radical Nissan</h3>
-                        <p style="margin-bottom: 20px;">Una demostración de nuestra capacidad artesanal de planchado. Transformamos carrocerías castigadas por los años en paneles con un reflejo espejo impecable, conservando sus emblemas originales.</p>
-                    </div>
+            <div class="destacado-row" style="flex-direction: row-reverse;">
+                <div class="destacado-img">
+                    <img src="bmw-motor.jpg" alt="Vano motor limpio tras entrega">
+                </div>
+                <div class="destacado-text">
+                    <h3>Control de Entrega</h3>
+                    <p>Cada vehículo pasa por una inspección rigurosa antes de salir del taller. Nos aseguramos de que el vehículo sea devuelto impecable por fuera y con el vano motor completamente libre de polvillo de lijado o residuos de materiales.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PIE DE PÁGINA -->
     <footer id="contacto">
+        <p>© 2026 Premium Paint & Finish. Todos los derechos reservados.</p>
+        <p>Zona de Recepción y Coordinación: <span class="data-destacado">Av. Río Grande, Pueblo Libre, Lima</span></p>
+        <p>Contacto Directo: <span class="data-destacado">921 291 886</span></p>
+    </footer>
+
+</body>
+</html>

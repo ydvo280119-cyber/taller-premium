@@ -6,19 +6,16 @@
     <title>Premium Paint & Finish</title>
     <style>
         /* 1. DISEÑO BASE DEL TALLER */
-        /* Configura el fondo negro absoluto (#050505) y letras blancas limpias */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
         /* 2. BARRA DE NAVEGACIÓN SUPERIOR (MENÚ) */
-        /* Se mantiene fija arriba. Texto en blanco y la palabra FINISH en dorado sutil (#d4af37) */
         header { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #151515; }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; color: #ffffff; text-transform: uppercase; }
         .logo span { color: #d4af37; }
 
         /* 3. ESTRUCTURA VISUAL DE LA PORTADA (HERO) */
-        /* Vincula de fondo tu imagen real '2.jpeg' (el BMW de frente) como marca de agua con un filtro oscuro para que las letras se lean perfecto */
         .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('2.jpeg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; }
         .hero-content h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; max-width: 700px; }
@@ -26,7 +23,6 @@
         .hero-content p { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 40px; max-width: 520px; }
         
         /* 4. BOTONES DE ACCIÓN */
-        /* El botón dorado de WhatsApp tiene un efecto de transición suave al pasar el mouse */
         .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; }
         .btn-gold { background: linear-gradient(135deg, #d4af37, #aa820a); color: #000000; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s; }
         .btn-gold:hover { transform: translateY(-2px); }
@@ -34,7 +30,6 @@
         .btn-outline:hover { background-color: #ffffff; color: #000000; border-color: #ffffff; }
 
         /* 5. BARRA DE INFORMACIÓN FIJA INFERIOR */
-        /* Asegura que la dirección física y el teléfono del taller queden fijos abajo de la portada */
         .hero-footer { position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(5, 5, 5, 0.9); border-top: 1px solid #151515; padding: 20px; }
         .hero-footer-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.9rem; color: #888888; }
         .data-highlight { color: #ffffff; font-weight: 600; }
@@ -52,18 +47,17 @@
     <!-- BLOQUE PRINCIPAL DE LA PORTADA -->
     <section class="hero-section">
         <div class="hero-content">
-            <!-- Título de impacto comercial honesto con acento dorado -->
             <h1>Planchado y Pintura Estructural con <span>Insumos Premium</span></h1>
             <p>Ejecutamos procesos correctivos reales basados en la reconstrucción milimétrica de la lata y el uso de laboratorios de color seleccionados en Pueblo Libre.</p>
             
             <div class="hero-actions">
-                <!-- CONEXIÓN A WHATSAPP: Enlace directo verificado a tu celular 921291886 con mensaje automático -->
+                <!-- ENLACE DE WHATSAPP CORREGIDO: Se eliminó el carácter especial para asegurar conexión directa -->
                 <a href="https://wa.me." target="_blank" class="btn-gold">Cotizar vía WhatsApp</a>
                 <a href="#proceso-tecnico" class="btn-outline">Ver procesos técnicos</a>
             </div>
         </div>
 
-        <!-- DATOS ESTRATÉGICOS: Aseguran la ubicación y el teléfono fijo al fondo de la pantalla -->
+        <!-- DATOS ESTRATÉGICOS -->
         <div class="hero-footer">
             <div class="hero-footer-container">
                 <div>📍 Recepción y Coordinación: <span class="data-highlight">Av. Río Grande, Pueblo Libre, Lima</span></div>

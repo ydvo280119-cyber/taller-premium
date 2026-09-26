@@ -9,71 +9,82 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        /* Barra de Navegación Fina y Transparente */
+        /* Barra de Navegación */
         header { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #151515; }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; color: #ffffff; text-transform: uppercase; }
         .logo span { color: #d4af37; }
         .nav-links a { margin-left: 25px; color: #888888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: #d4af37; }
+        .nav-links a:hover { color: #d4af37; }
 
-        /* Portada (Hero) con el BMW de Marca de Agua Imponente */
-        .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0.95)), url('portada.jpg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
+        /* Portada (Hero) - Marca de agua BMW de Frente */
+        .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('portada.jpg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; }
         .hero-content h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; max-width: 700px; }
         .hero-content h1 span { color: #d4af37; }
         .hero-content p { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 40px; max-width: 520px; }
         
-        /* Botones de la Portada */
+        /* Botones Portada */
         .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; }
         .btn-gold { background: linear-gradient(135deg, #d4af37, #aa820a); color: #000000; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s, box-shadow 0.2s; }
         .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); }
         .btn-outline { border: 1px solid #444; color: #ffffff; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; transition: all 0.3s; }
         .btn-outline:hover { background-color: #ffffff; color: #000000; border-color: #ffffff; }
 
-        /* Contenedor General de Secciones */
-        section { padding: 100px 20px; border-bottom: 1px solid #111; }
+        /* Secciones */
+        section { padding: 90px 20px; border-bottom: 1px solid #111; }
         .container { max-width: 1100px; margin: 0 auto; }
-        .section-header { margin-bottom: 60px; }
+        .section-header { margin-bottom: 45px; }
         .section-title { font-size: 1.6rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; margin-bottom: 10px; }
         .section-title span { color: #d4af37; }
-        .section-subtitle { color: #555555; font-size: 1rem; }
+        .section-subtitle { color: #555555; font-size: 0.95rem; }
 
-        /* FLUJOGRAMA INTERACTIVO DE PROCESO (Línea de Tiempo) */
-        .timeline-wrapper { display: flex; flex-direction: column; gap: 40px; }
-        .timeline-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; position: relative; }
-        
-        .timeline-node { flex: 1; min-width: 160px; background-color: #0f0f0f; border: 1px solid #1a1a1a; padding: 20px; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; }
+        /* Sección Nosotros (Filosofía) */
+        .about-text { max-width: 800px; color: #aaaaaa; font-size: 1.05rem; line-height: 1.7; }
+        .about-text p { margin-bottom: 20px; }
+
+        /* FLUJOGRAMA INTERACTIVO (Línea de Tiempo) */
+        .timeline-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-bottom: 30px; }
+        .timeline-node { flex: 1; min-width: 150px; background-color: #0f0f0f; border: 1px solid #1a1a1a; padding: 15px; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; }
         .timeline-node:hover { border-color: #d4af37; }
         .timeline-node.active { border-color: #d4af37; background-color: #12100a; box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
-        .node-number { font-size: 0.75rem; font-weight: bold; color: #d4af37; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px; }
-        .node-title { font-size: 1rem; font-weight: 700; color: #ffffff; }
+        .node-number { font-size: 0.75rem; font-weight: bold; color: #d4af37; text-transform: uppercase; margin-bottom: 3px; letter-spacing: 1px; }
+        .node-title { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
 
-        /* Visor de Evidencia Técnica Dinámica */
-        .timeline-display { display: flex; flex-wrap: wrap; gap: 50px; background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 6px; padding: 40px; align-items: center; min-height: 420px; }
-        .display-img { flex: 1.2; min-width: 320px; text-align: center; }
-        .display-img img { width: 100%; max-height: 340px; object-fit: cover; border-radius: 4px; border: 1px solid #222; display: none; }
+        .timeline-display { display: flex; flex-wrap: wrap; gap: 40px; background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 6px; padding: 35px; align-items: center; min-height: 400px; }
+        .display-img { flex: 1.2; min-width: 320px; }
+        .display-img img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px; border: 1px solid #222; display: none; }
         .display-img img.active { display: block; animation: visualFade 0.4s ease-out; }
         
         .display-text-content { flex: 1; min-width: 300px; }
         .display-pane { display: none; }
         .display-pane.active { display: block; animation: visualFade 0.4s ease-out; }
-        .display-pane h3 { font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; color: #ffffff; }
-        .display-pane h3 span { color: #d4af37; }
-        .display-pane p { color: #888888; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
-        
+        .display-pane h3 { font-size: 1.4rem; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
+        .display-pane p { color: #888888; font-size: 0.95rem; line-height: 1.6; }
         .badge-tech { display: inline-block; background-color: #1a1a1a; color: #d4af37; padding: 4px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; border: 1px solid #2a2a2a; }
 
+        /* Casos de Estudio (Proyectos) */
+        .project-row { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; border: 1px solid #1a1a1a; background: #0f0f0f; border-radius: 6px; overflow: hidden; }
+        .project-img { flex: 1; min-width: 320px; }
+        .project-img img { width: 100%; height: 100%; min-height: 250px; object-fit: cover; display: block; }
+        .project-text { flex: 1.2; min-width: 320px; padding: 35px; display: flex; flex-direction: column; justify-content: center; }
+        .project-text h3 { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: #d4af37; }
+        .project-text p { color: #888888; font-size: 0.95rem; }
+
+        /* Grilla de Portafolio / Autos Atendidos */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .portfolio-card { background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 4px; overflow: hidden; }
+        .portfolio-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #1a1a1a; }
+        .portfolio-card p { padding: 12px; font-size: 0.85rem; color: #666666; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
+
         @keyframes visualFade {
-            from { opacity: 0; transform: translateY(8px); }
+            from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Botón de WhatsApp Flotante Sobrio */
-        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #ffffff; padding: 14px 24px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; transition: transform 0.2s; }
-        .wa-floating-btn:hover { transform: translateY(-2px); }
+        /* WhatsApp Flotante */
+        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #ffffff; padding: 14px 24px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; }
 
-        /* Pie de Página */
         footer { background-color: #020202; padding: 50px 20px; text-align: center; border-top: 1px solid #111; color: #444444; font-size: 0.85rem; }
         footer p { margin-bottom: 6px; }
         footer .data-highlight { color: #888888; }
@@ -81,33 +92,44 @@
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR -->
     <header>
         <div class="nav-container">
             <div class="logo">PREMIUM PAINT <span>& FINISH</span></div>
             <nav class="nav-links">
-                <a href="#proceso-tecnico" class="active">Evolución de Procesos</a>
-                <a href="https://wa.me" target="_blank" class="btn-header" style="background: none; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Coordinar Cita</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#proceso-tecnico">Procesos</a>
+                <a href="#casos-estudio">Casos</a>
+                <a href="#portafolio">Portafolio</a>
             </nav>
         </div>
     </header>
 
-    <!-- PORTADA: El BMW azul de frente como marca de agua -->
+    <!-- PORTADA -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Planchado y Pintura Estructural con <span>Insumos Premium</span></h1>
             <p>Ejecutamos procesos correctivos reales basados en la reconstrucción milimétrica de la lata y el uso de laboratorios de color seleccionados en Pueblo Libre.</p>
-            
             <div class="hero-actions">
-                <a href="https://wa.me?text=Hola%20Premium%20Paint%20%26%20Finish%2C%20deseo%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20auto.%20Adjunto%20fotos." target="_blank" class="btn-gold">
-                    Cotizar Reparación vía WhatsApp
-                </a>
-                <a href="#proceso-tecnico" class="btn-outline">Ver procesos de trabajo</a>
+                <a href="https://wa.me." target="_blank" class="btn-gold">Cotizar vía WhatsApp</a>
+                <a href="#proceso-tecnico" class="btn-outline">Ver procesos técnicos</a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN INTERACTIVA DE INGENIERÍA AUTOMOTRIZ -->
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosotros</h2>
+            </div>
+            <div class="about-text">
+                <p>En Premium Paint & Finish no entendemos el trabajo como un proceso masivo de reparación. Nos apasiona la reconstrucción técnica; la precisión de devolver un panel a su estado original basándonos en la persistencia, el análisis del metal vivo y la aplicación rigurosa de materiales de alta estabilidad.</p>
+                <p>Elegimos este rubro porque valoramos la simetría y el comportamiento de la luz sobre una superficie perfecta. Cada vehículo que ingresa al taller recibe la misma exigencia técnica. No buscamos maquillar desperfectos para una entrega rápida; nos motiva entregar un acabado estructuralmente sano que mantenga su valor y su reflejo intacto a lo largo de los años.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUJOGRAMA INTERACTIVO -->
     <section id="proceso-tecnico">
         <div class="container">
             <div class="section-header">
@@ -116,34 +138,4 @@
             </div>
             
             <div class="timeline-wrapper">
-                <!-- Línea de Tiempo Horizontal (Nodos Interactivos) -->
                 <div class="timeline-nav">
-                    <div class="timeline-node active" onclick="changeStage(1)">
-                        <div class="node-number">Fase 01</div>
-                        <div class="node-title">Lata Dañada</div>
-                    </div>
-                    <div class="timeline-node" onclick="changeStage(2)">
-                        <div class="node-number">Fase 02</div>
-                        <div class="node-title">Planchado Spotter</div>
-                    </div>
-                    <div class="timeline-node" onclick="changeStage(3)">
-                        <div class="node-number">Fase 03</div>
-                        <div class="node-title">Masilla Técnica</div>
-                    </div>
-                    <div class="timeline-node" onclick="changeStage(4)">
-                        <div class="node-number">Fase 04</div>
-                        <div class="node-title">Pintura Multicapa</div>
-                    </div>
-                    <div class="timeline-node" onclick="changeStage(5)">
-                        <div class="node-number">Fase 05</div>
-                        <div class="node-title">Barniz Axalta</div>
-                    </div>
-                    <div class="timeline-node" onclick="changeStage(6)">
-                        <div class="node-number">Fase 06</div>
-                        <div class="node-title">Inspección Final</div>
-                    </div>
-                </div>
-
-                <!-- Visor Técnico Dinámico (Imágenes y Textos Sincronizados) -->
-                <div class="timeline-display">
-                    <div class="display-img">

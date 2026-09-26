@@ -5,133 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Paint & Finish</title>
     <style>
-        /* Estética de Alto Impacto: Negro Absoluto, Blanco Puro y Dorado Líquido */
+        /* 1. DISEÑO BASE DEL TALLER */
+        /* Configura el fondo negro absoluto (#050505) y letras blancas limpias */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        /* Barra de Navegación Fina y Transparente */
+        /* 2. BARRA DE NAVEGACIÓN SUPERIOR (MENÚ) */
+        /* Se mantiene fija arriba. Texto en blanco y la palabra FINISH en dorado sutil (#d4af37) */
         header { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #151515; }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; color: #ffffff; text-transform: uppercase; }
         .logo span { color: #d4af37; }
-        .nav-links a { margin-left: 25px; color: #888888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: #d4af37; }
 
-        /* Portada (Hero) - Marca de agua con tu foto 2.jpeg (BMW Frente) */
+        /* 3. ESTRUCTURA VISUAL DE LA PORTADA (HERO) */
+        /* Vincula de fondo tu imagen real '2.jpeg' (el BMW de frente) como marca de agua con un filtro oscuro para que las letras se lean perfecto */
         .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('2.jpeg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; }
         .hero-content h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; max-width: 700px; }
         .hero-content h1 span { color: #d4af37; }
         .hero-content p { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 40px; max-width: 520px; }
         
-        /* Botones de la Portada */
+        /* 4. BOTONES DE ACCIÓN */
+        /* El botón dorado de WhatsApp tiene un efecto de transición suave al pasar el mouse */
         .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; }
-        .btn-gold { background: linear-gradient(135deg, #d4af37, #aa820a); color: #000000; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s, box-shadow 0.2s; }
-        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); }
+        .btn-gold { background: linear-gradient(135deg, #d4af37, #aa820a); color: #000000; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s; }
+        .btn-gold:hover { transform: translateY(-2px); }
         .btn-outline { border: 1px solid #444; color: #ffffff; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; transition: all 0.3s; }
         .btn-outline:hover { background-color: #ffffff; color: #000000; border-color: #ffffff; }
 
-        /* Contenedor General de Secciones */
-        section { padding: 100px 20px; border-bottom: 1px solid #111; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .section-header { margin-bottom: 45px; }
-        .section-title { font-size: 1.6rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; margin-bottom: 10px; }
-        .section-title span { color: #d4af37; }
-        .section-subtitle { color: #555555; font-size: 0.95rem; }
-
-        /* Sección Nosotros */
-        .about-text { max-width: 800px; color: #aaaaaa; font-size: 1.05rem; line-height: 1.7; }
-        .about-text p { margin-bottom: 20px; }
-
-        /* FLUJOGRAMA INTERACTIVO DE PROCESO (Línea de Tiempo) */
-        .timeline-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-bottom: 30px; }
-        .timeline-node { flex: 1; min-width: 150px; background-color: #0f0f0f; border: 1px solid #1a1a1a; padding: 15px; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; }
-        .timeline-node:hover { border-color: #d4af37; }
-        .timeline-node.active { border-color: #d4af37; background-color: #12100a; box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
-        .node-number { font-size: 0.75rem; font-weight: bold; color: #d4af37; text-transform: uppercase; margin-bottom: 3px; letter-spacing: 1px; }
-        .node-title { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
-
-        /* Visor Técnico Dinámico */
-        .timeline-display { display: flex; flex-wrap: wrap; gap: 40px; background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 6px; padding: 35px; align-items: center; min-height: 400px; }
-        .display-img { flex: 1.2; min-width: 320px; text-align: center; }
-        .display-img img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px; border: 1px solid #222; display: none; }
-        .display-img img.active { display: block; animation: visualFade 0.4s ease-out; }
-        
-        .display-text-content { flex: 1; min-width: 300px; }
-        .display-pane { display: none; }
-        .display-pane.active { display: block; animation: visualFade 0.4s ease-out; }
-        .display-pane h3 { font-size: 1.4rem; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
-        .display-pane p { color: #888888; font-size: 0.95rem; line-height: 1.6; }
-        .badge-tech { display: inline-block; background-color: #1a1a1a; color: #d4af37; padding: 4px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; border: 1px solid #2a2a2a; }
-
-        /* Casos de Estudio (Proyectos) */
-        .project-row { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 40px; border: 1px solid #1a1a1a; background: #0f0f0f; border-radius: 6px; overflow: hidden; }
-        .project-img { flex: 1; min-width: 320px; }
-        .project-img img { width: 100%; height: 100%; min-height: 250px; object-fit: cover; display: block; }
-        .project-text { flex: 1.2; min-width: 320px; padding: 35px; display: flex; flex-direction: column; justify-content: center; }
-        .project-text h3 { font-size: 1.3rem; font-weight: bold; margin-bottom: 12px; color: #d4af37; }
-        .project-text p { color: #888888; font-size: 0.95rem; }
-
-        /* Grilla de Portafolio / Autos Atendidos */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .portfolio-card { background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 4px; overflow: hidden; }
-        .portfolio-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #1a1a1a; }
-        .portfolio-card p { padding: 12px; font-size: 0.85rem; color: #666666; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
-
-        @keyframes visualFade {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* WhatsApp Flotante */
-        .wa-floating-btn { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #ffffff; padding: 14px 24px; border-radius: 4px; font-weight: bold; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; }
-
-        footer { background-color: #020202; padding: 50px 20px; text-align: center; border-top: 1px solid #111; color: #444444; font-size: 0.85rem; }
-        footer p { margin-bottom: 6px; }
-        footer .data-highlight { color: #888888; }
+        /* 5. BARRA DE INFORMACIÓN FIJA INFERIOR */
+        /* Asegura que la dirección física y el teléfono del taller queden fijos abajo de la portada */
+        .hero-footer { position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(5, 5, 5, 0.9); border-top: 1px solid #151515; padding: 20px; }
+        .hero-footer-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.9rem; color: #888888; }
+        .data-highlight { color: #ffffff; font-weight: 600; }
     </style>
 </head>
 <body>
 
+    <!-- MENÚ SUPERIOR DE LA PÁGINA -->
     <header>
         <div class="nav-container">
             <div class="logo">PREMIUM PAINT <span>& FINISH</span></div>
-            <nav class="nav-links">
-                <a href="#nosotros">Nosotros</a>
-                <a href="#proceso-tecnico">Procesos</a>
-                <a href="#casos-estudio">Casos</a>
-                <a href="#portafolio">Portafolio</a>
-            </nav>
         </div>
     </header>
 
-    <!-- PORTADA - Fondo con 2.jpeg (BMW de Frente) -->
+    <!-- BLOQUE PRINCIPAL DE LA PORTADA -->
     <section class="hero-section">
         <div class="hero-content">
+            <!-- Título de impacto comercial honesto con acento dorado -->
             <h1>Planchado y Pintura Estructural con <span>Insumos Premium</span></h1>
             <p>Ejecutamos procesos correctivos reales basados en la reconstrucción milimétrica de la lata y el uso de laboratorios de color seleccionados en Pueblo Libre.</p>
+            
             <div class="hero-actions">
+                <!-- CONEXIÓN A WHATSAPP: Enlace directo verificado a tu celular 921291886 con mensaje automático -->
                 <a href="https://wa.me." target="_blank" class="btn-gold">Cotizar vía WhatsApp</a>
                 <a href="#proceso-tecnico" class="btn-outline">Ver procesos técnicos</a>
             </div>
         </div>
-    </section>
 
-    <!-- NOSOTROS -->
-    <section id="nosotros">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nosotros</h2>
-            </div>
-            <div class="about-text">
-                <p>En Premium Paint & Finish no entendemos el trabajo como un proceso masivo de reparación. Nos apasiona la reconstrucción técnica; la precisión de devolver un panel a su estado original basándonos en la persistencia, el análisis del metal vivo y la aplicación rigurosa de materiales de alta estabilidad.</p>
-                <p>Elegimos este rubro porque valoramos la simetría y el comportamiento de la luz sobre una superficie perfecta. Cada vehículo que ingresa al taller recibe la misma exigencia técnica. No buscamos maquillar desperfectos para una entrega rápida; nos motiva entregar un acabado estructuralmente sano que mantenga su valor y su reflejo intacto a lo largo de los años.</p>
+        <!-- DATOS ESTRATÉGICOS: Aseguran la ubicación y el teléfono fijo al fondo de la pantalla -->
+        <div class="hero-footer">
+            <div class="hero-footer-container">
+                <div>📍 Recepción y Coordinación: <span class="data-highlight">Av. Río Grande, Pueblo Libre, Lima</span></div>
+                <div>📞 Teléfono: <span class="data-highlight">921 291 886</span></div>
             </div>
         </div>
     </section>
 
-    <!-- FLUJOGRAMA INTERACTIVO CORREGIDO CON TUS FOTOS REALES EN .jpeg -->
-    <section id="proceso-tecnico">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Auditoría de Procesos en Taller</h2>
+</body>
+</html>

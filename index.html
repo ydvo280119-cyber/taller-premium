@@ -93,9 +93,10 @@
                 <!-- Contenedor del Visor de Imágenes -->
                 <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
                     <div style="position: relative; flex: 1; background: #000;">
-                        <img id="img-fase-1" src="abolladura.jpeg" alt="Lata original dañada" style="width: 100%; display: block; height: auto;">
-                        <img id="img-fase-2" src="lijado.jpeg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto;">
-                        <img id="img-fase-3" src="puntos.jpeg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto;">
+<img id="img-fase-1" src="abolladura.jpeg" alt="Lata original dañada" style="width: 100%; display: block; height: auto;">
+<img id="img-fase-2" src="lijado.jpeg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto;">
+<img id="img-fase-3" src="puntos.jpeg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto;">
+
                     </div>
                     
                     <!-- Textos explicativos dinámicos -->
@@ -121,30 +122,39 @@
     </section>
 
     <!-- Programación interna del visor interactivo -->
-    <script>
-        function verPaso(pasoNum) {
-            // IDs de todos los elementos
-            const elementos = ['fase-1', 'fase-2', 'fase-3'];
+<script>
+    function verPaso(pasoNum) {
+        // Fase 1: Abolladura
+        if (pasoNum === 1) {
+            document.getElementById('img-fase-1').style.display = 'block';
+            document.getElementById('img-fase-2').style.display = 'none';
+            document.getElementById('img-fase-3').style.display = 'none';
             
-            elementos.forEach((id, index) => {
-                const img = document.getElementById('img-' + id);
-                const txt = document.getElementById('txt-' + id);
-                const btn = document.getElementById('btn-' + id);
-                
-                if ((index + 1) === pasoNum) {
-                    img.style.display = 'block';
-                    txt.style.display = 'block';
-                    btn.style.background = '#1a1a1a';
-                    btn.style.borderColor = '#d4af37';
-                    btn.style.color = '#ffffff';
-                } else {
-                    img.style.display = 'none';
-                    txt.style.display = 'none';
-                    btn.style.background = '#050505';
-                    btn.style.borderColor = '#222';
-                    btn.style.color = '#888888';
-                }
-            });
+            document.getElementById('txt-fase-1').style.display = 'block';
+            document.getElementById('txt-fase-2').style.display = 'none';
+            document.getElementById('txt-fase-3').style.display = 'none';
         }
-    </script>
+        // Fase 2: Metal Vivo
+        if (pasoNum === 2) {
+            document.getElementById('img-fase-1').style.display = 'none';
+            document.getElementById('img-fase-2').style.display = 'block';
+            document.getElementById('img-fase-3').style.display = 'none';
+            
+            document.getElementById('txt-fase-1').style.display = 'none';
+            document.getElementById('txt-fase-2').style.display = 'block';
+            document.getElementById('txt-fase-3').style.display = 'none';
+        }
+        // Fase 3: Spotter
+        if (pasoNum === 3) {
+            document.getElementById('img-fase-1').style.display = 'none';
+            document.getElementById('img-fase-2').style.display = 'none';
+            document.getElementById('img-fase-3').style.display = 'block';
+            
+            document.getElementById('txt-fase-1').style.display = 'none';
+            document.getElementById('txt-fase-2').style.display = 'none';
+            document.getElementById('txt-fase-3').style.display = 'block';
+        }
+    }
+</script>
+
 

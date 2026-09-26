@@ -61,7 +61,7 @@
     </main>
 
 </body>
-          <!-- PASO 2: SECCIÓN NOSOTROS CON SECUENCIA INTERACTIVA DE PLANCHADO -->
+    <!-- PASO 2: SECCIÓN NOSOTROS CON SECUENCIA INTERACTIVA CORREGIDA -->
     <section id="nosotros" style="padding: 90px 20px; background-color: #0d0d0d; border-bottom: 1px solid #1a1a1a;">
         <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
             
@@ -80,10 +80,10 @@
                 </div>
             </div>
 
-            <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
+            <!-- COLUMNA DERECHA: Secuencia Interactiva Corregida -->
             <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
                 
-                <!-- Botones selectores estilo pestañas del demo -->
+                <!-- Botones selectores estilo pestañas -->
                 <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
                     <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 1px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer;">1. Daño Inicial</button>
                     <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer;">2. Metal Vivo</button>
@@ -93,23 +93,24 @@
                 <!-- Contenedor del Visor de Imágenes -->
                 <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
                     <div style="position: relative; flex: 1; background: #000;">
+                        <!-- Ajuste de IDs y clases para evitar bloqueos del navegador -->
                         <img id="img-fase-1" src="abolladura.jpeg" alt="Lata original dañada" style="width: 100%; display: block; height: auto;">
                         <img id="img-fase-2" src="lijado.jpeg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto;">
                         <img id="img-fase-3" src="puntos.jpeg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto;">
                     </div>
                     
-                    <!-- Textos explicativos dinámicos -->
+                    <!-- Textos explicativos -->
                     <div style="padding: 20px; background-color: #0f0f0f; border-top: 1px solid #222;">
                         <div id="txt-fase-1" style="display: block;">
                             <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">01. Estado Inicial del Panel</h3>
                             <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Evaluación del impacto severo sobre la línea de quiebre original del vehículo. Se determina la tensión del metal para planificar la recuperación simétrica sin estirar la lata.</p>
                         </div>
                         <div id="txt-fase-2" style="display: none;">
-                            <h3>02. Remoción de Capas Antiguas</h3>
+                            <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">02. Remoción de Capas Antiguas</h3>
                             <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Lijado técnico controlado para descubrir el metal vivo. Limpiamos la superficie al 100% eliminando cualquier residuo previo para trabajar directamente sobre la lámina real.</p>
                         </div>
                         <div id="txt-fase-3" style="display: none;">
-                            <h3>03. Planchado Estructural por Puntos</h3>
+                            <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">03. Planchado Estructural por Puntos</h3>
                             <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Jalado milimétrico externo utilizando tecnología Spotter. Al regresar el metal a su posición original de fábrica, garantizamos un uso mínimo de masilla de acabado, evitando que el trabajo se agriete.</p>
                         </div>
                     </div>
@@ -120,18 +121,16 @@
         </div>
     </section>
 
-    <!-- Programación interna del visor interactivo -->
+    <!-- Programación Javascript Corregida Quirúrgicamente -->
     <script>
         function verPaso(pasoNum) {
-            // IDs de todos los elementos
-            const elementos = ['fase-1', 'fase-2', 'fase-3'];
-            
-            elementos.forEach((id, index) => {
-                const img = document.getElementById('img-' + id);
-                const txt = document.getElementById('txt-' + id);
-                const btn = document.getElementById('btn-' + id);
+            var pasos =;
+            pasos.forEach(function(p) {
+                var img = document.getElementById('img-fase-' + p);
+                var txt = document.getElementById('txt-fase-' + p);
+                var btn = document.getElementById('btn-fase-' + p);
                 
-                if ((index + 1) === pasoNum) {
+                if (p === pasoNum) {
                     img.style.display = 'block';
                     txt.style.display = 'block';
                     btn.style.background = '#1a1a1a';
@@ -147,3 +146,4 @@
             });
         }
     </script>
+        

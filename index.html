@@ -9,41 +9,41 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        /* Barra de Navegación */
+        /* Barra de Navegación Fina y Transparente */
         header { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #151515; }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; color: #ffffff; text-transform: uppercase; }
         .logo span { color: #d4af37; }
         .nav-links a { margin-left: 25px; color: #888888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover { color: #d4af37; }
+        .nav-links a:hover, .nav-links a.active { color: #d4af37; }
 
-        /* Portada (Hero) - Marca de agua BMW de Frente */
-        .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('portada.jpg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
+        /* Portada (Hero) - Marca de agua con tu foto 2.jpeg (BMW Frente) */
+        .hero-section { position: relative; height: 100vh; min-height: 650px; background: linear-gradient(rgba(5, 5, 5, 0.65), rgba(5, 5, 5, 0.95)), url('2.jpeg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; }
         .hero-content h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; max-width: 700px; }
         .hero-content h1 span { color: #d4af37; }
         .hero-content p { color: #aaaaaa; font-size: 1.1rem; margin-bottom: 40px; max-width: 520px; }
         
-        /* Botones Portada */
+        /* Botones de la Portada */
         .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; }
         .btn-gold { background: linear-gradient(135deg, #d4af37, #aa820a); color: #000000; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s, box-shadow 0.2s; }
         .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); }
         .btn-outline { border: 1px solid #444; color: #ffffff; padding: 16px 32px; font-size: 0.9rem; font-weight: bold; border-radius: 4px; text-decoration: none; transition: all 0.3s; }
         .btn-outline:hover { background-color: #ffffff; color: #000000; border-color: #ffffff; }
 
-        /* Secciones */
-        section { padding: 90px 20px; border-bottom: 1px solid #111; }
+        /* Contenedor General de Secciones */
+        section { padding: 100px 20px; border-bottom: 1px solid #111; }
         .container { max-width: 1100px; margin: 0 auto; }
         .section-header { margin-bottom: 45px; }
         .section-title { font-size: 1.6rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; margin-bottom: 10px; }
         .section-title span { color: #d4af37; }
         .section-subtitle { color: #555555; font-size: 0.95rem; }
 
-        /* Sección Nosotros (Filosofía) */
+        /* Sección Nosotros */
         .about-text { max-width: 800px; color: #aaaaaa; font-size: 1.05rem; line-height: 1.7; }
         .about-text p { margin-bottom: 20px; }
 
-        /* FLUJOGRAMA INTERACTIVO (Línea de Tiempo) */
+        /* FLUJOGRAMA INTERACTIVO DE PROCESO (Línea de Tiempo) */
         .timeline-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-bottom: 30px; }
         .timeline-node { flex: 1; min-width: 150px; background-color: #0f0f0f; border: 1px solid #1a1a1a; padding: 15px; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; }
         .timeline-node:hover { border-color: #d4af37; }
@@ -51,8 +51,9 @@
         .node-number { font-size: 0.75rem; font-weight: bold; color: #d4af37; text-transform: uppercase; margin-bottom: 3px; letter-spacing: 1px; }
         .node-title { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
 
+        /* Visor Técnico Dinámico */
         .timeline-display { display: flex; flex-wrap: wrap; gap: 40px; background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 6px; padding: 35px; align-items: center; min-height: 400px; }
-        .display-img { flex: 1.2; min-width: 320px; }
+        .display-img { flex: 1.2; min-width: 320px; text-align: center; }
         .display-img img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px; border: 1px solid #222; display: none; }
         .display-img img.active { display: block; animation: visualFade 0.4s ease-out; }
         
@@ -72,7 +73,7 @@
         .project-text p { color: #888888; font-size: 0.95rem; }
 
         /* Grilla de Portafolio / Autos Atendidos */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
         .portfolio-card { background-color: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 4px; overflow: hidden; }
         .portfolio-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #1a1a1a; }
         .portfolio-card p { padding: 12px; font-size: 0.85rem; color: #666666; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -104,7 +105,7 @@
         </div>
     </header>
 
-    <!-- PORTADA -->
+    <!-- PORTADA - Fondo con 2.jpeg (BMW de Frente) -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Planchado y Pintura Estructural con <span>Insumos Premium</span></h1>
@@ -129,13 +130,8 @@
         </div>
     </section>
 
-    <!-- FLUJOGRAMA INTERACTIVO -->
+    <!-- FLUJOGRAMA INTERACTIVO CORREGIDO CON TUS FOTOS REALES EN .jpeg -->
     <section id="proceso-tecnico">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Auditoría de Procesos en Taller</h2>
-                <p class="section-subtitle">Selecciona cada fase del flujograma para comprobar la evidencia física de nuestras intervenciones:</p>
-            </div>
-            
-            <div class="timeline-wrapper">
-                <div class="timeline-nav">

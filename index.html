@@ -82,79 +82,72 @@
 
             <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
             <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
-                
-                <!-- Botones selectores estilo pestañas del demo -->
-                <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
-                    <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 1px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer;">1. Daño Inicial</button>
-                    <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer;">2. Metal Vivo</button>
-                    <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer;">3. Spotter</button>
-                </div>
-
-                <!-- Contenedor del Visor de Imágenes -->
-                <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
-                    <div style="position: relative; flex: 1; background: #000;">
-<img id="img-fase-1" src="abolladura.jpeg" alt="Lata original dañada" style="width: 100%; display: block; height: auto;">
-<img id="img-fase-2" src="lijado.jpeg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto;">
-<img id="img-fase-3" src="puntos.jpeg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto;">
-
-                    </div>
-                    
-                    <!-- Textos explicativos dinámicos -->
-                    <div style="padding: 20px; background-color: #0f0f0f; border-top: 1px solid #222;">
-                        <div id="txt-fase-1" style="display: block;">
-                            <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">01. Estado Inicial del Panel</h3>
-                            <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Evaluación del impacto severo sobre la línea de quiebre original del vehículo. Se determina la tensión del metal para planificar la recuperación simétrica sin estirar la lata.</p>
-                        </div>
-                        <div id="txt-fase-2" style="display: none;">
-                            <h3>02. Remoción de Capas Antiguas</h3>
-                            <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Lijado técnico controlado para descubrir el metal vivo. Limpiamos la superficie al 100% eliminando cualquier residuo previo para trabajar directamente sobre la lámina real.</p>
-                        </div>
-                        <div id="txt-fase-3" style="display: none;">
-                            <h3>03. Planchado Estructural por Puntos</h3>
-                            <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Jalado milimétrico externo utilizando tecnología Spotter. Al regresar el metal a su posición original de fábrica, garantizamos un uso mínimo de masilla de acabado, evitando que el trabajo se agriete.</p>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Botones selectores estilo pestañas -->
+            <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
+                <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 2px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">1. Daño Inicial</button>
+                <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">2. Metal Vivo</button>
+                <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">3. Spotter</button>
             </div>
-            
-        </div>
-    </section>
 
-    <!-- Programación interna del visor interactivo -->
+            <!-- Contenedor del Visor de Imágenes con archivos .jpg reales -->
+            <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
+                <div style="position: relative; flex: 1; background: #000;">
+                    <img id="img-fase-1" src="abolladura.jpg" alt="Lata original dañada" style="width: 100%; display: block; height: auto; object-fit: cover;">
+                    <img id="img-fase-2" src="lijado.jpg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto; object-fit: cover;">
+                    <img id="img-fase-3" src="puntos.jpg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto; object-fit: cover;">
+                </div>
+                
+                <!-- Textos explicativos dinámicos -->
+                <div style="padding: 20px; background-color: #0f0f0f; border-top: 1px solid #222;">
+                    <div id="txt-fase-1" style="display: block;">
+                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">01. Estado Inicial del Panel</h3>
+                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Evaluación del impacto severo sobre la línea de quiebre original del vehículo. Se determina la tensión del metal para planificar la recuperación simétrica sin estirar la lata.</p>
+                    </div>
+                    <div id="txt-fase-2" style="display: none;">
+                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">02. Remoción de Capas Antiguas</h3>
+                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Lijado técnico profundo hasta descubrir el metal vivo. Eliminamos imperfecciones previas y óxido oculto, asegurando una superficie virgen de máxima adherencia estructural.</p>
+                    </div>
+                    <div id="txt-fase-3" style="display: none;">
+                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">03. Planchado Estructural por Puntos</h3>
+                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Jalado milimétrico externo utilizando tecnología Spotter. Al regresar el metal a su posición original de fábrica, garantizamos un uso mínimo de masilla de acabado, evitando grietas futuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programación interna del visor interactivo -->
 <script>
-    function verPaso(pasoNum) {
-        // Fase 1: Abolladura
-        if (pasoNum === 1) {
-            document.getElementById('img-fase-1').style.display = 'block';
-            document.getElementById('img-fase-2').style.display = 'none';
-            document.getElementById('img-fase-3').style.display = 'none';
-            
-            document.getElementById('txt-fase-1').style.display = 'block';
-            document.getElementById('txt-fase-2').style.display = 'none';
-            document.getElementById('txt-fase-3').style.display = 'none';
-        }
-        // Fase 2: Metal Vivo
-        if (pasoNum === 2) {
-            document.getElementById('img-fase-1').style.display = 'none';
-            document.getElementById('img-fase-2').style.display = 'block';
-            document.getElementById('img-fase-3').style.display = 'none';
-            
-            document.getElementById('txt-fase-1').style.display = 'none';
-            document.getElementById('txt-fase-2').style.display = 'block';
-            document.getElementById('txt-fase-3').style.display = 'none';
-        }
-        // Fase 3: Spotter
-        if (pasoNum === 3) {
-            document.getElementById('img-fase-1').style.display = 'none';
-            document.getElementById('img-fase-2').style.display = 'none';
-            document.getElementById('img-fase-3').style.display = 'block';
-            
-            document.getElementById('txt-fase-1').style.display = 'none';
-            document.getElementById('txt-fase-2').style.display = 'none';
-            document.getElementById('txt-fase-3').style.display = 'block';
+function verPaso(pasoNum) {
+    // 1. Limpiar los estados de todos los pasos (ocultar todo)
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById('img-fase-' + i).style.display = 'none';
+        document.getElementById('txt-fase-' + i).style.display = 'none';
+        
+        let btn = document.getElementById('btn-fase-' + i);
+        if (btn) {
+            btn.style.background = '#050505';
+            btn.style.border = '1px solid #222';
+            btn.style.color = '#888888';
         }
     }
+
+    // 2. Mostrar la imagen y texto del paso seleccionado
+    document.getElementById('img-fase-' + pasoNum).style.display = 'block';
+    document.getElementById('txt-fase-' + pasoNum).style.display = 'block';
+
+    // 3. Aplicar el borde amarillo destacado al botón activo
+    let btnActivo = document.getElementById('btn-fase-' + pasoNum);
+    if (btnActivo) {
+        btnActivo.style.background = '#1a1a1a';
+        btnActivo.style.border = '2px solid #d4af37'; 
+        btnActivo.style.color = '#ffffff';
+    }
+}
 </script>
-
-
+</body>
+</html>

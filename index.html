@@ -3,161 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Paint & Finish</title>
+    <title>Premium Paint & Finish | Planchado y Pintura</title>
     <style>
-        /* Estructura Limpia, Profesional y Real */
+        /* Estructura Avanzada Estilo Demo Moderno */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-        body { background-color: #0d0d0d; color: #ffffff; line-height: 1.6; }
+        body { background-color: #0a0a0a; color: #ffffff; line-height: 1.6; }
         
-        /* Menú Superior */
-        header { background-color: #121212; padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
-        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; color: #ffffff; }
-        .nav-links a { margin-left: 20px; color: #aaaaaa; font-size: 0.9rem; text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover { color: #ffffff; }
+        /* Barra de Navegación Idéntica al Demo */
+        header { background-color: #ffffff; padding: 15px 20px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.1rem; font-weight: bold; letter-spacing: 0.5px; color: #000000; display: flex; align-items: center; gap: 8px; }
+        .logo-box { background-color: #000000; color: #ffffff; padding: 5px 10px; border-radius: 4px; font-weight: 900; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { margin-right: 20px; color: #555555; font-size: 0.9rem; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #000000; }
+        .btn-header { background-color: #ffb700; color: #000000; padding: 10px 20px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; text-decoration: none; transition: background-color 0.3s; }
+        .btn-header:hover { background-color: #e0a100; }
 
-        /* Portada Principal: BMW de Frente */
-        .hero { padding: 150px 20px 60px; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
-        .hero-text { flex: 1; min-width: 300px; }
-        .hero-text h1 { font-size: 2.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 15px; color: #ffffff; }
-        .hero-text p { color: #888888; font-size: 1.05rem; margin-bottom: 30px; max-width: 500px; }
-        .hero-img { flex: 1; min-width: 300px; }
-        .hero-img img { width: 100%; border-radius: 6px; border: 1px solid #222; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        /* Portada Impactante con Imagen de Fondo (Hero) */
+        .hero-section { position: relative; height: 100vh; min-height: 600px; background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('portada.jpg') no-repeat center center/cover; padding: 0 20px; display: flex; align-items: center; }
+        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; padding-top: 60px; }
+        .badge-google { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.15); }
+        .badge-star { color: #ffb700; }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; max-width: 800px; letter-spacing: -1px; }
+        .hero-content p { color: #b3b3b3; font-size: 1.15rem; margin-bottom: 35px; max-width: 600px; }
+        
+        /* Contenedor de Botones de Acción */
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 15px; }
+        .btn-primary-wa { background-color: #ffb700; color: #000000; padding: 15px 30px; font-weight: bold; border-radius: 30px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(255,183,0,0.3); transition: transform 0.2s; }
+        .btn-primary-wa:hover { transform: translateY(-2px); }
+        .btn-secondary-quote { border: 2px solid #ffffff; color: #ffffff; padding: 15px 30px; font-weight: bold; border-radius: 30px; text-decoration: none; display: inline-flex; align-items: center; transition: background-color 0.3s; }
+        .btn-secondary-quote:hover { background-color: rgba(255,255,255,0.1); }
 
-        /* Botón Directo WhatsApp */
-        .btn-whatsapp { background-color: #25d366; color: #ffffff; padding: 14px 28px; font-size: 0.95rem; font-weight: bold; border-radius: 4px; display: inline-flex; align-items: center; text-decoration: none; transition: background-color 0.3s; }
-        .btn-whatsapp:hover { background-color: #1ebd59; }
+        /* Barra de Datos Fija Inferior */
+        .hero-footer { position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.8); border-top: 1px solid #222; padding: 15px 20px; }
+        .hero-footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; font-size: 0.85rem; color: #aaa; }
+        .footer-link-map { color: #ffb700; text-decoration: none; font-weight: bold; }
 
-        /* Secciones del Taller */
-        section { padding: 80px 20px; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 40px; color: #ffffff; border-left: 4px solid #ffffff; padding-left: 15px; }
+        /* Bloques Técnicos Basados en el Flujo */
+        section { padding: 90px 20px; border-bottom: 1px solid #151515; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2rem; font-weight: bold; margin-bottom: 10px; color: #ffffff; }
+        .section-subtitle { color: #666666; margin-bottom: 50px; font-size: 1rem; max-width: 600px; }
+        
+        /* Grilla de Tres Columnas */
+        .grid-process { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .process-card { background-color: #121212; border: 1px solid #222; border-radius: 6px; overflow: hidden; transition: border-color 0.3s; }
+        .process-card:hover { border-color: #ffb700; }
+        .process-card img { width: 100%; height: 240px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card-content h3 { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #ffffff; }
+        .card-content p { color: #888888; font-size: 0.9rem; line-height: 1.5; }
 
-        /* Grilla de Procesos Técnicos */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background-color: #121212; border: 1px solid #222; border-radius: 6px; overflow: hidden; }
-        .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-body h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; color: #ffffff; }
-        .card-body p { color: #888888; font-size: 0.9rem; line-height: 1.5; }
+        /* Fila de Evidencia Destacada (Barniz Axalta) */
+        .featured-block { display: flex; flex-wrap: wrap; gap: 40px; background-color: #121212; border: 1px solid #222; border-radius: 8px; overflow: hidden; margin-top: 40px; }
+        .featured-img { flex: 1; min-width: 300px; }
+        .featured-img img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; display: block; }
+        .featured-text { flex: 1; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+        .featured-text h3 { font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; color: #ffb700; }
+        .featured-text p { color: #888888; font-size: 0.95rem; margin-bottom: 15px; }
 
-        /* Bloque Destacado de Acabado Final */
-        .destacado-section { background-color: #121212; padding: 60px 20px; border-top: 1px solid #222; border-bottom: 1px solid #222; }
-        .destacado-row { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
-        .destacado-img { flex: 1; min-width: 300px; }
-        .destacado-img img { width: 100%; border-radius: 6px; border: 1px solid #222; display: block; }
-        .destacado-text { flex: 1; min-width: 300px; }
-        .destacado-text h3 { font-size: 1.4rem; font-weight: bold; margin-bottom: 12px; }
-        .destacado-text p { color: #888888; font-size: 0.95rem; margin-bottom: 15px; }
-
-        /* Pie de Página Directo */
-        footer { background-color: #0a0a0a; padding: 40px 20px; text-align: center; border-top: 1px solid #222; color: #555555; font-size: 0.85rem; }
-        footer p { margin-bottom: 6px; }
-        footer .data-destacado { color: #aaa; }
+        /* Botón de WhatsApp Flotante Fijo abajo a la derecha */
+        .wa-floating { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: #ffffff; padding: 12px 24px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 1000; }
+        
+        footer-last { background-color: #050505; padding: 40px 20px; text-align: center; color: #444; font-size: 0.8rem; border-top: 1px solid #151515; display: block; }
     </style>
 </head>
 <body>
 
+    <!-- MENÚ SUPERIOR IDENTICO AL DE TU CAPTURA -->
     <header>
         <div class="nav-container">
-            <div class="logo">PREMIUM PAINT & FINISH</div>
+            <div class="logo"><div class="logo-box">P</div> PREMIUM PAINT & FINISH</div>
             <nav class="nav-links">
-                <a href="#procesos">Procesos Técnicos</a>
-                <a href="#acabado">Garantía de Brillo</a>
+                <a href="#como-trabajamos">Cómo trabajamos</a>
+                <a href="#procesos">Procesos</a>
                 <a href="#contacto">Contacto</a>
+                <a href="https://wa.me" target="_blank" class="btn-header">Escríbanos</a>
             </nav>
         </div>
     </header>
 
-    <!-- PORTADA: El BMW azul de frente en el taller -->
-    <section style="border-bottom: 1px solid #1a1a1a;">
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Planchado y Pintura con Acabado de Alta Durabilidad</h1>
-                <p>Aplicamos un alto estándar técnico en cada vehículo. Procesos transparentes y materiales de primera línea para asegurar un resultado impecable y resistente al tiempo.</p>
-                <a href="https://wa.me." target="_blank" class="btn-whatsapp">
-                    Cotizar Reparación por WhatsApp
-                </a>
-            </div>
-            <div class="hero-img">
-                <img src="portada.jpg" alt="BMW acabado premium frente">
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: Evidencia de los Procesos Reales del Taller -->
-    <section id="procesos">
-        <div class="container">
-            <h2 class="section-title">Evolución de Trabajo en Taller</h2>
+    <!-- PORTADA HERO IMPACTANTE CON REFUERZO VISUAL -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="badge-google"><span class="badge-star">★</span> Alto Estándar Técnico</div>
+            <h1>Planchado y Pintura con Acabado de Alta Durabilidad</h1>
+            <p>Aplicamos un control riguroso en la carrocería de tu vehículo. Procesos transparentes y materiales premium para un resultado resistente al tiempo en Pueblo Libre.</p>
             
-            <div class="grid">
-                <!-- Bloque 1: Planchado Estructural (Foto del Kia Picanto en planchado) -->
-                <div class="card">
-                    <img src="planchado-puntos.jpg" alt="Planchado estructural de paneles">
-                    <div class="card-body">
+            <div class="hero-actions">
+                <a href="https://wa.me?text=Hola%20Premium%20Paint%20%26%20Finish%2C%20deseo%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20auto.%20Adjunto%20fotos." target="_blank" class="btn-primary-wa">
+                    Cotizar por WhatsApp
+                </a>
+                <a href="#procesos" class="btn-secondary-quote">Ver procesos de trabajo</a>
+            </div>
+        </div>
+
+        <!-- Barra inferior de datos de contacto de la portada -->
+        <div class="hero-footer">
+            <div class="hero-footer-container">
+                <div>📍 Av. Río Grande, Pueblo Libre, Lima · <a href="#contacto" class="footer-link-map">Cómo llegar →</a></div>
+                <div>📞 +51 921 291 886</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN CÓMO TRABAJAMOS -->
+    <section id="como-trabajamos">
+        <div class="container">
+            <h2 class="section-title">Le explicamos el proceso real, sin vueltas</h2>
+            <p class="section-subtitle">Evaluamos y definimos las fases técnicas requeridas antes de tocar la carrocería de su vehículo.</p>
+            
+            <div class="grid-process">
+                <div class="process-card">
+                    <img src="planchado-puntos.jpg" alt="Planchado estructural por puntos">
+                    <div class="card-content">
                         <h3>Planchado Estructural</h3>
-                        <p>Corrección técnica de abolladuras utilizando desabollado por puntos (spotter). Regresamos la lata a su posición original evitando el uso excesivo de masilla.</p>
+                        <p>Corrección de abolladuras utilizando desabollado por puntos (spotter). Regresamos la lata a su posición original de fábrica evitando rellenos excesivos de masilla.</p>
                     </div>
                 </div>
 
-                <!-- Bloque 2: Preparación de Superficies (Foto del enmascarado del auto) -->
-                <div class="card">
-                    <img src="proceso-empapelado.jpg" alt="Preparación técnica y desmontaje">
-                    <div class="card-body">
+                <div class="process-card">
+                    <img src="proceso-empapelado.jpg" alt="Aislamiento técnico de paneles">
+                    <div class="card-content">
                         <h3>Preparación de Superficies</h3>
-                        <p>Desmontamos accesorios, lunas y manijas aislando por completo los sistemas eléctricos originales para lograr una cobertura uniforme en los bordes críticos.</p>
+                        <p>Desmontamos molduras, manijas y accesorios aislando los sistemas eléctricos originales para lograr una cobertura uniforme de color en los bordes.</p>
                     </div>
                 </div>
 
-                <!-- Bloque 3: Evidencia de Brillo Lateral (Foto BMW costado) -->
-                <div class="card">
-                    <img src="portada-costado.jpg" alt="Acabado de pintura profesional lateral">
-                    <div class="card-body">
-                        <h3>Calidad en Acabados</h3>
-                        <p>Intervención y sellado minucioso de paneles completos, garantizando uniones limpias de pintura y un reflejo uniforme que destaca bajo cualquier tipo de luz.</p>
+                <div class="process-card">
+                    <img src="portada-costado.jpg" alt="Control de simetría de color">
+                    <div class="card-content">
+                        <h3>Tratamiento de Paneles</h3>
+                        <p>Intervención limpia en la lata. Aseguramos la correcta adherencia de la base técnica para que la estructura mantenga su resistencia con los años.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE GARANTÍA: El reflejo del Kia Picanto dentro del taller -->
-    <section id="acabado" class="destacado-section">
-        <div class="container">
-            <div class="destacado-row">
-                <div class="destacado-img">
-                    <img src="picanto-trasero.jpg" alt="Acabado espejo en Kia Picanto dentro de taller">
-                </div>
-                <div class="destacado-text">
-                    <h3>Insumos Seleccionados y Barniz Premium</h3>
-                    <p>La calidad de entrega se sostiene en el uso obligatorio de materiales de alta resistencia (como líneas Glasurit y Sherwin-Williams).</p>
-                    <p>Esta base técnica protege la carrocería frente al clima de Lima, asegurando que el reflejo espejo mantenga su profundidad y nitidez con el paso de los años sin ponerse amarillo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN FINAL: Pulcritud en los detalles del motor (Foto Motor BMW) -->
-    <section style="background-color: #0d0d0d;">
-        <div class="container">
-            <div class="destacado-row" style="flex-direction: row-reverse;">
-                <div class="destacado-img">
-                    <img src="bmw-motor.jpg" alt="Vano motor limpio tras entrega">
-                </div>
-                <div class="destacado-text">
-                    <h3>Control de Entrega</h3>
-                    <p>Cada vehículo pasa por una inspección rigurosa antes de salir del taller. Nos aseguramos de que el vehículo sea devuelto impecable por fuera y con el vano motor completamente libre de polvillo de lijado o residuos de materiales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PIE DE PÁGINA -->
-    <footer id="contacto">
-        <p>© 2026 Premium Paint & Finish. Todos los derechos reservados.</p>
-        <p>Zona de Recepción y Coordinación: <span class="data-destacado">Av. Río Grande, Pueblo Libre, Lima</span></p>
-        <p>Contacto Directo: <span class="data-destacado">921 291 886</span></p>
-    </footer>
-
-</body>
-</html>
+    <!-- SECCIÓN DE GARANTÍA DE MATERIALES (Fila Destacada con el Picanto de Taller) -->

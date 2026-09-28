@@ -7,7 +7,7 @@
     <style>
         /* Estilos generales */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #ffffff; color: #1d1d1f; }
+        body { background-color: #0b0b0b; color: #ffffff; }
         
         /* Menú superior flotante */
         header { background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 12px 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1); }
@@ -15,7 +15,7 @@
         .logo { font-size: 1.05rem; font-weight: 700; color: #000000; letter-spacing: -0.5px; }
         .btn-header { background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; text-decoration: none; }
 
-        /* Sección Hero */
+        /* Sección Hero de la Portada */
         .hero-section { background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('2.jpeg') no-repeat center center/cover; padding: 140px 20px 80px; min-height: 520px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; color: #ffffff; }
         .badge-review { font-size: 0.85rem; font-weight: 600; color: #aaa; margin-bottom: 15px; }
@@ -26,10 +26,10 @@
         .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 35px; }
         .btn-whatsapp { background-color: #25d366; color: #ffffff; padding: 14px 28px; font-weight: 700; border-radius: 8px; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; }
         
-        /* Datos fijos */
+        /* Datos fijos inferiores */
         .hero-data { font-size: 0.9rem; color: #aaa; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
 
-        /* NUEVA CLASE: Contenedor Premium Oscuro para que se noten las letras */
+        /* Contenedor de la Sección Nosotros */
         .nosotros-container { background-color: #0b0b0b; padding: 80px 20px; display: flex; justify-content: center; align-items: flex-start; }
         .nosotros-content { max-width: 1100px; width: 100%; display: flex; flex-wrap: wrap; gap: 40px; }
     </style>
@@ -40,8 +40,7 @@
     <header>
         <div class="nav-container">
             <div class="logo">PREMIUM PAINT & FINISH</div>
-           <a href="https://whatsapp.com." target="_blank" class="btn-header">Agendar Cita</a>
-            <a href="https://wa.me." target="_blank" class="btn-header">Agendar Cita</a>
+            <a href="https://whatsapp.com." target="_blank" class="btn-header">Agendar Cita</a>
         </div>
     </header>
 
@@ -51,10 +50,9 @@
             <div class="badge-review">Planchado y Pintura Estructural</div>
             <h1>Planchado y Pintura con Acabado de Alta Durabilidad</h1>
             <p>Aplicamos un alto estándar técnico en cada vehículo. Procesos transparentes y materiales premium para asegurar un resultado resistente al tiempo. Visítanos en Pueblo Libre y recibe un diagnóstico estructural preciso y sin compromiso.</p>
-            <a href="https://whatsapp.com." target="_blank" class="btn-whatsapp">Agendar Evaluación Sin Costo</a>
+            
             <div class="hero-actions">
-                <!-- CORREGIDO: Redirección correcta a WhatsApp -->
-                <a href="https://wa.me." target="_blank" class="btn-whatsapp">Agendar Evaluación Sin Costo</a>
+                <a href="https://whatsapp.com." target="_blank" class="btn-whatsapp">Agendar Evaluación Sin Costo</a>
             </div>
 
             <div class="hero-data">
@@ -64,38 +62,39 @@
         </div>
     </main>
 
-    <!-- SECCIÓN NOSOTROS (CORREGIDA: Envuelta en un contenedor oscuro para legibilidad) -->
+    <!-- SECCIÓN NOSOTROS E INTERACTIVA -->
     <section class="nosotros-container">
         <div class="nosotros-content">
             
-            <!-- COLUMNA IZQUIERDA: Filosofía Técnica Comercial -->
+            <!-- COLUMNA IZQUIERDA: Filosofía Técnica -->
             <div style="flex: 1.2; min-width: 300px;">
                 <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 30px; letter-spacing: -0.5px;">
                     Nosotros
                 </h2>
                 <div style="font-size: 1.1rem; color: #e5e5ea; line-height: 1.75;">
                     <p style="margin-bottom: 22px;">
-                        En Premium Paint & Finish no entendemos el trabajo como un proceso masivo de reparación. Nos apasiona la reconstrucción técnica; la precisión de devolver un panel a su estado original basándonos en la persistencia, el análisis del metal vivo y la aplicación rigurosa de materiales de alta estabilidad.
+                        En Premium Paint & Finish no entendemos el trabajo como un process masivo de reparación. Nos apasiona la reconstrucción técnica; la precisión de devolver un panel a su estado original basándonos en la persistencia, el análisis del metal vivo y la aplicación rigurosa de materiales de alta estabilidad.
+                    </p>
+                    <p style="margin-bottom: 22px;">
+                        Elegimos este rubro porque valoramos la simetría y el comportamiento de la luz sobre una superficie perfecta. Cada vehículo que ingresa al taller —desde un auto de uso diario hasta un proyecto especial— recibe la misma exigencia técnica.
                     </p>
                     <p>
-                        Elegimos este rubro porque valoramos la simetría y el comportamiento de la luz sobre una superficie perfecta. Cada vehículo que ingresa al taller —desde un auto de uso diario hasta un proyecto especial— recibe la misma exigencia técnica. No buscamos maquillar desperfectos para una entrega rápida; nos motiva entregar un acabado estructuralmente sano que mantenga su valor y su reflejo intacto a lo largo de los años.
+                        No buscamos maquillar desperfectos para una entrega rápida; nos motiva entregar un acabado estructuralmente sano que mantenga su valor y su reflejo intacto a lo largo de los años.
                     </p>
                 </div>
             </div>
 
-            <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
+            <!-- COLUMNA DERECHA: Pestañas de Evidencia Física -->
             <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">      
-                <!-- Botones selectores estilo pestañas -->
                 <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
                     <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 2px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">1. Daño Inicial</button>
                     <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">2. Metal Vivo</button>
                     <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">3. Spotter</button>
                 </div>
 
-                <!-- Contenedor del Visor de Imágenes (CORREGIDO: Valida las extensiones en tu repositorio) -->
+                <!-- Visor de Imágenes -->
                 <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
                     <div style="position: relative; flex: 1; background: #000;">
-                        <!-- Nota: Recuerda verificar si tus archivos terminan en .jpg o .jpeg en GitHub -->
                         <img id="img-fase-1" src="abolladura.jpg" alt="Lata original dañada" style="width: 100%; display: block; height: auto; object-fit: cover;">
                         <img id="img-fase-2" src="lijado.jpg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto; object-fit: cover;">
                         <img id="img-fase-3" src="puntos.jpg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto; object-fit: cover;">
@@ -106,18 +105,15 @@
         </div>
     </section>
 
-    <!-- JAVASCRIPT PARA PASOS INTERACTIVOS -->
+    <!-- JAVASCRIPT -->
     <script>
         function verPaso(paso) {
-            // Ocultar todas las imágenes
             document.getElementById('img-fase-1').style.display = 'none';
             document.getElementById('img-fase-2').style.display = 'none';
             document.getElementById('img-fase-3').style.display = 'none';
             
-            // Mostrar la imagen seleccionada
             document.getElementById('img-fase-' + paso).style.display = 'block';
             
-            // Restablecer estilos de botones
             for(let i = 1; i <= 3; i++) {
                 let btn = document.getElementById('btn-fase-' + i);
                 btn.style.background = '#050505';
@@ -125,7 +121,6 @@
                 btn.style.color = '#888888';
             }
             
-            // Activar botón seleccionado
             let btnActivo = document.getElementById('btn-fase-' + paso);
             btnActivo.style.background = '#1a1a1a';
             btnActivo.style.border = '2px solid #d4af37';

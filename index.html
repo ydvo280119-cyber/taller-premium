@@ -120,43 +120,47 @@
 
 <!-- JAVASCRIPT -->
 <script>
-function verPaso(paso) {
-  // Pausar, ocultar videos y ocultar textos
-  for (let i = 1; i <= 3; i++) {
-    let vid = document.getElementById('img-fase-' + i);
-    vid.style.display = 'none';
-    vid.pause();
-    
-    let txt = document.getElementById('txt-fase-' + i);
-    txt.style.display = 'none';
+  function verPaso(paso) {
+    // 1. Ocultar y pausar todos los videos, ocultar textos descriptivos
+    for (let i = 1; i <= 3; i++) {
+      let vid = document.getElementById('img-fase-' + i);
+      let txt = document.getElementById('txt-fase-' + i);
+      let btn = document.getElementById('btn-fase-' + i);
+      
+      if (vid) {
+        vid.style.display = 'none';
+        vid.pause();
+      }
+      if (txt) {
+        txt.style.display = 'none';
+      }
+      if (btn) {
+        btn.style.background = '#050505';
+        btn.style.border = '1px solid #222';
+        btn.style.color = '#888888';
+      }
+    }
+
+    // 2. Mostrar y activar los elementos del paso seleccionado
+    let videoActivo = document.getElementById('img-fase-' + paso);
+    let textoActivo = document.getElementById('txt-fase-' + paso);
+    let btnActivo = document.getElementById('btn-fase-' + paso);
+
+    if (videoActivo) {
+      videoActivo.style.display = 'block';
+      videoActivo.play().catch(function(error) {
+        console.log("Auto-play prevenido");
+      });
+    }
+    if (textoActivo) {
+      textoActivo.style.display = 'block';
+    }
+    if (btnActivo) {
+      btnActivo.style.background = '#1a1a1a';
+      btnActivo.style.border = '2px solid #d4af37';
+      btnActivo.style.color = '#ffffff';
+    }
   }
-
-  // Mostrar y reproducir el video de la fase activa
-  let videoActivo = document.getElementById('img-fase-' + paso);
-  videoActivo.style.display = 'block';
-  videoActivo.play();
-  
-  // Mostrar el texto de la fase activa
-  let textoActivo = document.getElementById('txt-fase-' + paso);
-  textoActivo.style.display = 'block';
-
-  // Mostrar y reproducir el video de la fase activa
-  let videoActivo = document.getElementById('img-fase-' + paso);
-  videoActivo.style.display = 'block';
-  videoActivo.play();
-
-            for(let i = 1; i <= 3; i++) {
-                let btn = document.getElementById('btn-fase-' + i);
-                btn.style.background = '#050505';
-                btn.style.border = '1px solid #222';
-                btn.style.color = '#888888';
-            }
-            
-            let btnActivo = document.getElementById('btn-fase-' + paso);
-            btnActivo.style.background = '#1a1a1a';
-            btnActivo.style.border = '2px solid #d4af37';
-            btnActivo.style.color = '#ffffff';
-        }
-    </script>
+</script>
 </body>
 </html>

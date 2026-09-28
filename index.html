@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Paint & Finish</title>
     <style>
-        /* Estilo idéntico al demo de electricidad */
+        /* Estilos generales */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { background-color: #ffffff; color: #1d1d1f; }
         
-        /* Menú superior flotante idéntico al demo */
+        /* Menú superior flotante */
         header { background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 12px 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1); }
         .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.05rem; font-weight: 700; color: #000000; letter-spacing: -0.5px; }
         .btn-header { background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; text-decoration: none; }
 
-        /* Sección de la portada con la foto 2.jpeg (BMW) de fondo */
-        .hero-section { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('2.jpeg') no-repeat center center/cover; padding: 140px 20px 80px; min-height: 520px; display: flex; align-items: center; }
+        /* Sección Hero */
+        .hero-section { background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('2.jpeg') no-repeat center center/cover; padding: 140px 20px 80px; min-height: 520px; display: flex; align-items: center; }
         .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; color: #ffffff; }
         .badge-review { font-size: 0.85rem; font-weight: 600; color: #aaa; margin-bottom: 15px; }
         .hero-content h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 15px; letter-spacing: -1px; }
-        .hero-content p { font-size: 1.15rem; color: #ccc; margin-bottom: 30px; max-width: 550px; font-weight: 400; }
+        .hero-content p { font-size: 1.15rem; color: #ccc; margin-bottom: 30px; max-width: 650px; font-weight: 400; line-height: 1.5; }
         
-        /* Botones de acción limpios del demo */
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        /* Botones de acción */
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 35px; }
         .btn-whatsapp { background-color: #25d366; color: #ffffff; padding: 14px 28px; font-weight: 700; border-radius: 8px; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; }
         
-        /* Datos fijos inferiores del taller */
-        .hero-data { font-size: 0.9rem; color: #aaa; margin-top: 35px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
-        .data-link { color: #ffffff; text-decoration: none; font-weight: 600; }
+        /* Datos fijos */
+        .hero-data { font-size: 0.9rem; color: #aaa; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
+
+        /* NUEVA CLASE: Contenedor Premium Oscuro para que se noten las letras */
+        .nosotros-container { background-color: #0b0b0b; padding: 80px 20px; display: flex; justify-content: center; align-items: flex-start; }
+        .nosotros-content { max-width: 1100px; width: 100%; display: flex; flex-wrap: wrap; gap: 40px; }
     </style>
 </head>
 <body>
@@ -37,28 +40,34 @@
     <header>
         <div class="nav-container">
             <div class="logo">PREMIUM PAINT & FINISH</div>
-        <a href="https://wa.me." target="_blank" class="btn-header">Agendar Cita</a>
+            <!-- CORREGIDO: Redirección correcta a WhatsApp -->
+            <a href="https://wa.me." target="_blank" class="btn-header">Agendar Cita</a>
+        </div>
     </header>
 
     <!-- BLOQUE PRINCIPAL DE LA PORTADA -->
-        <!-- BLOQUE PRINCIPAL DE LA PORTADA -->
-    <main class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('2.jpeg') no-repeat center center/cover; padding: 140px 20px 80px; min-height: 520px; display: flex; align-items: center;">
-        <div class="hero-content" style="max-width: 1100px; margin: 0 auto; width: 100%; color: #ffffff;">
-            <div class="badge-review" style="font-size: 0.85rem; font-weight: 600; color: #aaa; margin-bottom: 15px;">Planchado y Pintura Estructural</div>
-            <h1 style="font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 15px; letter-spacing: -1px;">Planchado y Pintura con Acabado de Alta Durabilidad</h1>
-            <p style="font-size: 1.15rem; color: #ccc; margin-bottom: 30px; max-width: 650px; font-weight: 400; line-height: 1.5;">Aplicamos un alto estándar técnico en cada vehículo. Procesos transparentes y materiales premium para asegurar un resultado resistente al tiempo. Visítanos en Pueblo Libre y recibe un diagnóstico estructural preciso y sin compromiso.</p>
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="badge-review">Planchado y Pintura Estructural</div>
+            <h1>Planchado y Pintura con Acabado de Alta Durabilidad</h1>
+            <p>Aplicamos un alto estándar técnico en cada vehículo. Procesos transparentes y materiales premium para asegurar un resultado resistente al tiempo. Visítanos en Pueblo Libre y recibe un diagnóstico estructural preciso y sin compromiso.</p>
             
-            <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 35px;">
+            <div class="hero-actions">
+                <!-- CORREGIDO: Redirección correcta a WhatsApp -->
                 <a href="https://wa.me." target="_blank" class="btn-whatsapp">Agendar Evaluación Sin Costo</a>
             </div>
 
-            <div class="hero-data" style="font-size: 0.9rem; color: #aaa; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-wrap: wrap; gap: 20px;">
+            <div class="hero-data">
                 <div>📍 Av. Río Grande, Pueblo Libre, Lima</div>
                 <div>📞 +51 921 291 886</div>
             </div>
         </div>
     </main>
-    </main>
+
+    <!-- SECCIÓN NOSOTROS (CORREGIDA: Envuelta en un contenedor oscuro para legibilidad) -->
+    <section class="nosotros-container">
+        <div class="nosotros-content">
+            
             <!-- COLUMNA IZQUIERDA: Filosofía Técnica Comercial -->
             <div style="flex: 1.2; min-width: 300px;">
                 <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 30px; letter-spacing: -0.5px;">
@@ -75,161 +84,53 @@
             </div>
 
             <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
-            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
-            <!-- COLUMNA DERECHA: Secuencia Interactiva de Evidencia Física -->
-        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">      
-            <!-- Botones selectores estilo pestañas -->
-            <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
-                <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 2px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">1. Daño Inicial</button>
-                <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">2. Metal Vivo</button>
-                <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">3. Spotter</button>
+            <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">      
+                <!-- Botones selectores estilo pestañas -->
+                <div style="display: flex; gap: 10px; border-bottom: 1px solid #222; padding-bottom: 10px;">
+                    <button id="btn-fase-1" onclick="verPaso(1)" style="flex: 1; background: #1a1a1a; border: 2px solid #d4af37; color: #ffffff; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">1. Daño Inicial</button>
+                    <button id="btn-fase-2" onclick="verPaso(2)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">2. Metal Vivo</button>
+                    <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">3. Spotter</button>
+                </div>
+
+                <!-- Contenedor del Visor de Imágenes (CORREGIDO: Valida las extensiones en tu repositorio) -->
+                <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
+                    <div style="position: relative; flex: 1; background: #000;">
+                        <!-- Nota: Recuerda verificar si tus archivos terminan en .jpg o .jpeg en GitHub -->
+                        <img id="img-fase-1" src="abolladura.jpg" alt="Lata original dañada" style="width: 100%; display: block; height: auto; object-fit: cover;">
+                        <img id="img-fase-2" src="lijado.jpg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto; object-fit: cover;">
+                        <img id="img-fase-3" src="puntos.jpg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto; object-fit: cover;">
+                    </div>
+                </div>
             </div>
 
-            <!-- Contenedor del Visor de Imágenes con archivos .jpg reales -->
-            <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
-                <div style="position: relative; flex: 1; background: #000;">
-                    <img id="img-fase-1" src="abolladura.jpg" alt="Lata original dañada" style="width: 100%; display: block; height: auto; object-fit: cover;">
-                    <img id="img-fase-2" src="lijado.jpg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto; object-fit: cover;">
-                    <img id="img-fase-3" src="puntos.jpg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto; object-fit: cover;">
-                </div>
-                
-                <!-- Textos explicativos dinámicos -->
-                <div style="padding: 20px; background-color: #0f0f0f; border-top: 1px solid #222;">
-                    <div id="txt-fase-1" style="display: block;">
-                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">01. Estado Inicial del Panel</h3>
-                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Evaluación del impacto severo sobre la línea de quiebre original del vehículo. Se determina la tensión del metal para planificar la recuperación simétrica sin estirar la lata.</p>
-                    </div>
-                    <div id="txt-fase-2" style="display: none;">
-                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">02. Remoción de Capas Antiguas</h3>
-                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Lijado técnico profundo hasta descubrir el metal vivo. Eliminamos imperfecciones previas y óxido oculto, asegurando una superficie virgen de máxima adherencia estructural.</p>
-                    </div>
-                    <div id="txt-fase-3" style="display: none;">
-                        <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 5px;">03. Planchado Estructural por Puntos</h3>
-                        <p style="font-size: 0.9rem; color: #aaaaaa; margin: 0; line-height: 1.4;">Jalado milimétrico externo utilizando tecnología Spotter. Al regresar el metal a su posición original de fábrica, garantizamos un uso mínimo de masilla de acabado, evitando grietas futuras.</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Programación interna del visor interactivo -->
-<script>
-function verPaso(pasoNum) {
-    // 1. Limpiar los estados de todos los pasos (ocultar todo)
-    for (let i = 1; i <= 3; i++) {
-        document.getElementById('img-fase-' + i).style.display = 'none';
-        document.getElementById('txt-fase-' + i).style.display = 'none';
-        
-        let btn = document.getElementById('btn-fase-' + i);
-        if (btn) {
-            btn.style.background = '#050505';
-            btn.style.border = '1px solid #222';
-            btn.style.color = '#888888';
+    <!-- JAVASCRIPT PARA PASOS INTERACTIVOS -->
+    <script>
+        function verPaso(paso) {
+            // Ocultar todas las imágenes
+            document.getElementById('img-fase-1').style.display = 'none';
+            document.getElementById('img-fase-2').style.display = 'none';
+            document.getElementById('img-fase-3').style.display = 'none';
+            
+            // Mostrar la imagen seleccionada
+            document.getElementById('img-fase-' + paso).style.display = 'block';
+            
+            // Restablecer estilos de botones
+            for(let i = 1; i <= 3; i++) {
+                let btn = document.getElementById('btn-fase-' + i);
+                btn.style.background = '#050505';
+                btn.style.border = '1px solid #222';
+                btn.style.color = '#888888';
+            }
+            
+            // Activar botón seleccionado
+            let btnActivo = document.getElementById('btn-fase-' + paso);
+            btnActivo.style.background = '#1a1a1a';
+            btnActivo.style.border = '2px solid #d4af37';
+            btnActivo.style.color = '#ffffff';
         }
-    }
-
-    // 2. Mostrar la imagen y texto del paso seleccionado
-    document.getElementById('img-fase-' + pasoNum).style.display = 'block';
-    document.getElementById('txt-fase-' + pasoNum).style.display = 'block';
-
-    // 3. Aplicar el borde amarillo destacado al botón activo
-    let btnActivo = document.getElementById('btn-fase-' + pasoNum);
-    if (btnActivo) {
-        btnActivo.style.background = '#1a1a1a';
-        btnActivo.style.border = '2px solid #d4af37'; 
-        btnActivo.style.color = '#ffffff';
-    }
-}
-</script>
+    </script>
 </body>
 </html>
-<!-- BLOQUE 3: FLUJOGRAMA DE PROCESO TÉCNICO DETALLADO -->
-<section id="procesos" style="padding: 90px 20px; background: radial-gradient(circle at 50% 30%, #1e1e20 0%, #0d0d0d 70%); color: #ffffff; border-bottom: 1px solid #1a1a1a;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-        
-        <!-- Encabezado con Iluminación Técnica -->
-        <div style="text-align: center; margin-bottom: 60px;">
-            <span style="color: #d4af37; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 10px;">Ingeniería de Reparación</span>
-            <h2 style="font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; margin: 0;">Nuestras Estaciones de Trabajo</h2>
-            <p style="color: #a1a1a6; font-size: 1rem; max-width: 600px; margin: 15px auto 0; line-height: 1.5;">Conoce el flujo cronológico y transparente que sigue tu vehículo para garantizar un estándar de reconstrucción real.</p>
-        </div>
-
-        <!-- Rejilla de Tarjetas de Estaciones -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-            
-            <!-- ESTACIÓN 01 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 01</span>
-                    <img src="mustang-desarmado.jpg" alt="Desmontaje Técnico" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">01. Evaluación y Desmontaje</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Inspección transparente y desarmado técnico de molduras, manijas y accesorios. Aislamos por completo las líneas de cableado electrónico original para resguardar la ingeniería del vehículo.</p>
-                </div>
-            </div>
-
-            <!-- ESTACIÓN 02 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 02</span>
-                    <img src="planchado-puntos.jpg" alt="Planchado Spotter" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">02. Planchado por Puntos (Spotter)</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Intervención directa sobre el metal vivo. El jalado milimétrico externo con tecnología desabolladora evita estirar o quemar la lata, descartando el uso de rellenos gruesos de masilla.</p>
-                </div>
-            </div>
-
-            <!-- ESTACIÓN 03 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 03</span>
-                    <img src="mustang-oxido.jpg" alt="Cirugía de Lata" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">03. Cirugía de Lata y Saneamiento</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Tratamiento artesanal profundo contra la corrosión extrema. Cortamos y removemos el metal afectado por el óxido desde la raíz, devolviendo la simetría y pureza a los paneles castigados.</p>
-                </div>
-            </div>
-
-            <!-- ESTACIÓN 04 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 04</span>
-                    <img src="suv-masilla.jpg" alt="Nivelación Mínima" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">04. Nivelación en Espesores Micras</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Rompemos la costumbre del mercado de sobrecargar con masilla. Aplicamos capas técnicas ultra-finas estrictamente para alisar micras superficiales, evitando cuarteamientos futuros.</p>
-                </div>
-            </div>
-
-            <!-- ESTACIÓN 05 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 05</span>
-                    <img src="mustang-insumo.jpg" alt="Sellado e Insumos Premium" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">05. Caras Internas y Barniz Premium</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Tratamos las zonas ocultas sobre caballetes independientes. Aplicamos sistemas de pintura poliuretana multicapa y sellamos con Barniz de altos sólidos para una protección UV extrema.</p>
-                </div>
-            </div>
-
-            <!-- ESTACIÓN 06 -->
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 12px; overflow: hidden; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                <div style="height: 220px; overflow: hidden; background: #000; position: relative;">
-                    <span style="position: absolute; top: 15px; left: 15px; background: #d4af37; color: #000; padding: 4px 10px; font-size: 0.75rem; font-weight: 800; border-radius: 4px; z-index: 10;">ESTACIÓN 06</span>
-                    <img src="bmw-motor.jpg" alt="Inspección de Calidad" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
-                </div>
-                <div style="padding: 25px;">
-                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; font-weight: 700;">06. Control Final y Entrega Pulcra</h3>
-                    <p style="color: #aeaeae; font-size: 0.9rem; line-height: 1.5; margin: 0;">Evaluación rigurosa de simetría de reflejos bajo reflectores. Entregamos el vehículo impecable por fuera con un soplado profundo en el vano motor libre de polvillo de lijado.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>

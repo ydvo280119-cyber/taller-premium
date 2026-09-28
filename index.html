@@ -90,28 +90,33 @@
                     <button id="btn-fase-3" onclick="verPaso(3)" style="flex: 1; background: #050505; border: 1px solid #222; color: #888888; padding: 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;">3. Spotter</button>
                 </div>
 
-                <!-- Visor de Imágenes -->
-                <div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5); min-height: 380px; display: flex; flex-direction: column;">
-                    <div style="position: relative; flex: 1; background: #000;">
-                        <img id="img-fase-1" src="abolladura.jpg" alt="Lata original dañada" style="width: 100%; display: block; height: auto; object-fit: cover;">
-                        <img id="img-fase-2" src="lijado.jpg" alt="Lijado hasta la lata" style="width: 100%; display: none; height: auto; object-fit: cover;">
-                        <img id="img-fase-3" src="puntos.jpg" alt="Planchado por puntos Spotter" style="width: 100%; display: none; height: auto; object-fit: cover;">
-                    </div>
-                </div>
-            </div>
+                <!-- Visor de Videos -->
+<div style="border: 1px solid #222; background-color: #050505; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+  <div style="position: relative; flex: 1; background: #000;">
+    <video id="img-fase-1" src="inicial.mp4" style="width: 100%; display: block; height: auto;" autoplay loop muted playsinline></video>
+    <video id="img-fase-2" src="metal.mp4" style="width: 100%; display: none; height: auto;" loop muted playsinline></video>
+    <video id="img-fase-3" src="spotter t.mp4" style="width: 100%; display: none; height: auto;" loop muted playsinline></video>
+  </div>
+</div>
+</div>
+</div>
+</section>
 
-        </div>
-    </section>
+<!-- JAVASCRIPT -->
+<script>
+function verPaso(paso) {
+  // Pausar y ocultar todos los videos
+  for (let i = 1; i <= 3; i++) {
+    let vid = document.getElementById('img-fase-' + i);
+    vid.style.display = 'none';
+    vid.pause();
+  }
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function verPaso(paso) {
-            document.getElementById('img-fase-1').style.display = 'none';
-            document.getElementById('img-fase-2').style.display = 'none';
-            document.getElementById('img-fase-3').style.display = 'none';
-            
-            document.getElementById('img-fase-' + paso).style.display = 'block';
-            
+  // Mostrar y reproducir el video de la fase activa
+  let videoActivo = document.getElementById('img-fase-' + paso);
+  videoActivo.style.display = 'block';
+  videoActivo.play();
+
             for(let i = 1; i <= 3; i++) {
                 let btn = document.getElementById('btn-fase-' + i);
                 btn.style.background = '#050505';
